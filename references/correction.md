@@ -8,15 +8,15 @@
 2. 查看初始定位帧。疑点按原时间轴定点抽帧，并实际打开图片检查；生成帧文件不等于已经核对。示例中的路径替换为本次真实路径：
 
 ```bash
-python3 /Users/zerox-jj/.codex/skills/video-link-capture/scripts/review.py frames \
+python3 "$SKILL_DIR/scripts/review.py" frames \
   --result /absolute/run/result.json --times 19 24 46
 ```
 
 3. 无字幕或字幕为摘要时不要整段覆盖口播。可局部重新识别，已有缓存的 large-v3 仅作辅助，原稿正确时不要用更大的模型覆盖。此命令须使用已有转写环境；不会下载模型：
 
 ```bash
-/Users/zerox-jj/.cache/knowledge-video-editing/whisper-venv/bin/python \
-  /Users/zerox-jj/.codex/skills/video-link-capture/scripts/review.py recheck \
+"$WHISPER_PYTHON" \
+  "$SKILL_DIR/scripts/review.py" recheck \
   --result /absolute/run/result.json --start 16 --end 23 --model large-v3
 ```
 
@@ -57,7 +57,7 @@ python3 /Users/zerox-jj/.codex/skills/video-link-capture/scripts/review.py frame
 ```
 
 ```bash
-python3 /Users/zerox-jj/.codex/skills/video-link-capture/scripts/review.py apply \
+python3 "$SKILL_DIR/scripts/review.py" apply \
   --result /absolute/run/result.json --plan /absolute/run/review/plan.json
 ```
 

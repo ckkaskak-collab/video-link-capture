@@ -20,7 +20,7 @@ description: 使用 yt-dlp 处理用户投递的单条视频链接，提取完�
 将用户整段分享文字原样写入当前工作区 `work/分享文本.txt`，用文件传参，避免把用户文本拼进 shell。先查看 `capture.py --help`。路径以实际工作区和本 Skill 所在目录为准：
 
 ```bash
-python3 /Users/zerox-jj/.codex/skills/video-link-capture/scripts/capture.py \
+python3 "$SKILL_DIR/scripts/capture.py" \
   --source-file work/分享文本.txt --mode text --workspace /absolute/current-workspace
 ```
 
