@@ -1,0 +1,4 @@
+interface:
+  display_name: "单条视频链接提取"
+  short_description: "粘贴临时刷到的视频分享文本，按需提取完整口播字幕或保存视频文件"
+  default_prompt: "使用 $video-link-capture 提取这段分享链接的完整口播，按需保留视频。"
